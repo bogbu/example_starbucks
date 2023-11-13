@@ -1,0 +1,79 @@
+header {
+  //background: blue;
+
+  .inner {
+    width: 1100px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    background: orange;
+  }
+
+  .logo {
+    height: 75px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .sub-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .search {
+      input {
+        .material-icons {
+
+        }
+      }
+    }
+
+    ul {
+      //background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.menu {
+        font-family: Arial, sans-serif;
+
+        li {
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 12px;
+            background: black;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+          }
+
+          &:first-child {
+            //메뉴 리스트의 첫번째 가운데 줄 삭제
+            &:before {
+              display: none;
+            }
+          }
+
+          a {
+            display: block;
+            padding: 11px 16px;
+            background: #fff;
+            color: #656565;
+            font-size: 12px;
+
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
